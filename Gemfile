@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.3'
-
 # Begin Custom Gems
 gem 'devise'
 gem 'bootstrap'
@@ -12,6 +10,7 @@ gem 'tether-rails'
 gem 'simple_form'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '3543363026121ee28d98dfce4cb6366980c055ee'
 gem 'haml'
+gem 'ransack', '~> 2.1'
 # End Custom Gems
 
 
