@@ -3,12 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  if $('#letsmcq').length
-    $(window).bind 'beforeunload', ->
-      return 'Leave the Game?'
-    $(document).on 'turbolinks:before-visit', (event) ->
-      return event.preventDefault() if !confirm('Leave the Game?')
-      return
+  # if $('#letsmcq').length
+  #   $(window).bind 'beforeunload', ->
+  #     return 'Leave the Game?'
+  #   $(document).on 'turbolinks:before-visit', (event) ->
+  #     return event.preventDefault() if !confirm('Leave the Game?')
+  #     return
 
   $('#enter-ground-form').submit (e) ->
     e.preventDefault()
@@ -24,7 +24,6 @@ $ ->
     $(this).html('Copied')
 
   $('.process-selection').click ->
-    alert $(this).attr('id')
     $.ajax
       url: "#{window.location.href}/score"
       type: 'GET'

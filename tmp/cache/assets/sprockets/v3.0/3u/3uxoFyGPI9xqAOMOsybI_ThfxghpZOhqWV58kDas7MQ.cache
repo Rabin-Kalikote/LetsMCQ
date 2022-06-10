@@ -1,9 +1,0 @@
-I"Æ(function() {
-  App.grounds = App.cable.subscriptions.create("GroundsChannel", {
-    connected: function() {},
-    disconnected: function() {},
-    received: function(data) {}
-  });
-
-}).call(this);
-:ET
