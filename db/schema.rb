@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_10_114431) do
+ActiveRecord::Schema.define(version: 2022_06_09_110234) do
 
   create_table "ground_players", force: :cascade do |t|
     t.integer "ground_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_114431) do
   create_table "grounds", force: :cascade do |t|
     t.string "name"
     t.integer "prep", default: 0
-    t.integer "status", default: 0
+    t.integer "player_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -4,7 +4,7 @@ class Ground < ApplicationRecord
   has_many :users, through: :ground_players
 
   enum prep: [:plus_two, :ioe, :iom]
-  enum status: [:joining, :playing, :over]
+  # enum status: [:joining, :playing, :over]
 
   def to_param
     self.name
