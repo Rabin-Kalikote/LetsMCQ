@@ -8,5 +8,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://:pe7f6666898c49378ccc9637b2477896a9f28a2b01dff6e317b8a816ba33776c6@ec2-52-207-67-190.compute-1.amazonaws.com:7120
   channel_prefix: chatter_production

@@ -28,7 +28,6 @@ if $('html').data('controller') == 'grounds' and $('html').data('action') == 'sh
           setTimeout ->
             window.location.replace('http://localhost:3000/grounds')
           , 5000
-        else
-          console.log 'Unknown action'
+        else console.log 'Unknown action'
 
       # Called when there's incoming data on the websocket for this channel
