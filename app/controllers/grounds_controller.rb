@@ -37,7 +37,7 @@ class GroundsController < ApplicationController
 
   def start
     if current_user == @ground.organizer
-      @ground.playing!
+      # @ground.playing!
       ActionCable.server.broadcast "ground:#{@ground.name}:start", {action: 'started', user_id: current_user.id}
     end
   end

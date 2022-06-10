@@ -18,4 +18,3 @@
 //= require turbolinks
 //= require activestorage
 //= require_tree .
-//= stub pages
