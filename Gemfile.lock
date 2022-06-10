@@ -58,8 +58,6 @@ GEM
       execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
-    bootsnap (1.12.0)
-      msgpack (~> 1.2)
     bootstrap (5.1.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.9.3, < 3)
@@ -127,7 +125,6 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
     minitest (5.15.0)
-    msgpack (1.5.2)
     nio4r (2.5.8)
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
@@ -247,7 +244,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.1.0)
   bootstrap
   byebug
   capybara (>= 2.15, < 4.0)
