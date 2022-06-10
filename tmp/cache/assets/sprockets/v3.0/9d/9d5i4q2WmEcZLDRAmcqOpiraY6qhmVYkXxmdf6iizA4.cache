@@ -1,0 +1,12 @@
+I"(function() {
+  App.grounds = App.cable.subscriptions.create("GroundsChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      console.log(data);
+      return $('.participants').append(data.user);
+    }
+  });
+
+}).call(this);
+:ET

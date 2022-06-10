@@ -1,0 +1,15 @@
+.container
+  .text-center
+    %h1 Create new ground
+    %p Play Let's MCQ with your friend and prepare enter your dream college.
+
+  .create-new-ground.text-center
+    = simple_form_for Ground.new, html: { multipart: true} do |f|
+      = f.select :prep, options_for_select(Ground.preps.map {|key, value| [key.titleize, Ground.preps.key(value)]})
+      = f.button :submit, value: 'Create New Ground'
+  .text-center or
+
+  .enter-ground.text-center
+    = form_tag Ground.new, id: 'enter-ground-form', method: 'get' do
+      = text_field_tag :name, nil, placeholder: 'Ground ID', required: true
+      = submit_tag 'Enter Ground'

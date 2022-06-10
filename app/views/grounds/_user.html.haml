@@ -1,0 +1,3 @@
+.participant{id: "participant-#{user.id}"}
+  .user= "[#{user.email.split("@")[0][0].capitalize}]"
+  .score= user.ground_players.where(ground_id: ground.id).first.score

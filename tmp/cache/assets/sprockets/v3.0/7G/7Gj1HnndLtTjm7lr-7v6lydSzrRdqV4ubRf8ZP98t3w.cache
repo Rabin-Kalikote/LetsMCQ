@@ -1,0 +1,17 @@
+I"Š(function() {
+  $(function() {
+    return $('#enter-ground-form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: 'GET',
+        url: '/grounds/' + $('#enter-ground-form #name').val(),
+        data: $('#enter-ground-form').serialize(),
+        success: function(data) {
+          console.log('Created New Ground.');
+        }
+      });
+    });
+  });
+
+}).call(this);
+:ET

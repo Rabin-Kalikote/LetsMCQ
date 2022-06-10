@@ -1,0 +1,9 @@
+<%= form_for Message.new, remote: true do |f| %>
+
+<div class="input-group">
+	<%= f.text_field  :body, as: :string, placeholder: "Enter message...", class:'form-control', label: false, wrapper: false, autocomplete:'off' %>
+	<div class="input-group-append">
+		<%= f.submit "Send Message", class: 'btn btn-outline-secondary' %>
+	</div>
+</div>
+<% end %>

@@ -1,0 +1,10 @@
+I"ß(function() {
+  $(function() {
+    return $('#enter-ground-form').submit(function(e) {
+      e.preventDefault();
+      window.location.href = '/grounds/' + $('#enter-ground-form #name').val();
+    });
+  });
+
+}).call(this);
+:ET

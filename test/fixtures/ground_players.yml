@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ground: one
+  user: one
+  score: 1
+
+two:
+  ground: two
+  user: two
+  score: 1

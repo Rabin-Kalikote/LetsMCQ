@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-controller="<%= controller.controller_path if controller.controller_path == 'grounds' %>" data-action="<%= controller.action_name if controller.action_name == 'show' %>">
+  <head>
+    <title>Let's MCQ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+
+    <%= yield %>
+
+    <%= notice if notice.present? %>
+
+  </body>
+</html>

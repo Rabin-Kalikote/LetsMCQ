@@ -1,0 +1,27 @@
+.container.ground{id: "#{@ground.name}"}
+  %h1.text-center Let's MCQ
+  - if @mcqs.present?
+    #letsmcq
+      - if current_user == @ground.organizer
+        .ground-name-wrap.my-4
+          #ground-name= @ground.name
+          %a.copy-ground-name Copy
+      .participants.w-100.d-flex.justify-content-center.my-4
+        - @ground.users.each do |user|
+          = render 'grounds/user', user: user, ground: @ground
+      - if current_user == @ground.organizer
+        .action-start.w-100.d-flex.justify-content-center
+          = link_to 'Start Game', start_ground_path, remote: true, class: 'py-5'
+      - else
+        The host is starting the game soon.
+
+      .mcqs.w-100.d-flex.justify-content-center.d-none
+        - @mcqs.each do |mcq|
+          .question.px-4
+            %p.text-center= mcq
+            = button_tag 'Select', class: "process-selection", id: mcq
+      .notices.w-100.d-flex.justify-content-center.py-5
+      .actions.w-100.d-flex.justify-content-center
+        = link_to 'Leave Ground', leave_ground_path, class: 'py-5'
+  - else
+    = link_to 'Enter the ground', join_ground_path(@ground), class: 'd-block text-center my-5'
