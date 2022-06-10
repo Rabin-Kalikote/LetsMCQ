@@ -4,7 +4,6 @@ class CreateGrounds < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :prep, default: 0
       t.integer :player_count, default: 0
-      t.references :user, foreign_key: true
 
       t.timestamps
     end
